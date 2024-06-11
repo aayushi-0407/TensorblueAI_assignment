@@ -100,7 +100,8 @@ This Django project allows users to upload files in various formats (PDF, XLSX, 
     - Submit the form to generate and execute the code.
     - View the generated code, execution result, and any standard output.
 
-
+**Output folder**:
+-contains small example of passing a pdf with questions to perform, prompt and the output.
 
 
 
