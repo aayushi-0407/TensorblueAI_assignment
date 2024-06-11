@@ -1,0 +1,34 @@
+`<!-- myapp/templates/myapp/generate_code.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate and Execute Code</title>
+</head>
+<body>
+    <h1>Generate and Execute Code</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="file">Choose file:</label>
+        <input type="file" id="file" name="file" required><br><br>
+        <label for="prompt">Enter prompt:</label>
+        <textarea id="prompt" name="prompt" rows="4" cols="50" required></textarea><br><br>
+        <button type="submit">Generate and Execute</button>
+    </form>
+
+    {% if generated_code %}
+        <h2>Generated Code:</h2>
+        <pre>{{ generated_code }}</pre>
+    {% endif %}
+
+    {% if execution_result %}
+        <h2>Execution Result:</h2>
+        <pre>{{ execution_result }}</pre>
+    {% endif %}
+
+    {% if stdout_output %}
+        <h2>Standard Output:</h2>
+        <pre>{{ stdout_output }}</pre>
+    {% endif %}
+</body>
+</html>

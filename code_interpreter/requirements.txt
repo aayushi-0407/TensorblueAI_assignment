@@ -1,0 +1,6 @@
+django
+anthropic
+PyPDF2
+openpyxl
+pandas
+python-docx
